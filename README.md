@@ -1,3 +1,6 @@
+This is my very-very old project. I should rework a lot of stuff.
+
+
 <hr>
 <p class="has-line-data" data-line-start="1" data-line-end="2">[What it is?]</p>
 <p class="has-line-data" data-line-start="3" data-line-end="6">[Web_scraper] - prototype of HTML parser which collect data from web tables.<br>

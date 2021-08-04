@@ -60,10 +60,10 @@ else:
 
 def create_db_if_not_exists():
     cur.execute("CREATE TABLE IF NOT EXISTS parser  ( \
-                name text,                       \
+                name text,                            \
                 email text,                           \
                 gender text,                          \
-                degree text,           \
+                degree text,                          \
                 university text)")
     cur.execute("CREATE EXTENSION IF NOT EXISTS pgcrypto;")
 

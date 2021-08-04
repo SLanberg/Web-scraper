@@ -5,13 +5,10 @@
 then [Web_scraper] shows statistic of people with and without degree in form of pie chart.</p>
 <hr>
 <p class="has-line-data" data-line-start="12" data-line-end="13">[First setup]</p>
-<p class="has-line-data" data-line-start="14" data-line-end="17">On line [55]:<br>
-conn = psycopg2.connect(“host=localhost dbname=postgres user=postgres password=admin”) #[!!!]<br>
-Change host, dbname, user and password to yours from PostgreSQL if you don't use already prepared create_database.txt commands</p>
-<p class="has-line-data" data-line-start="18" data-line-end="21">Then on line [62]:<br>
+conn = psycopg2.connect(“host=localhost dbname=postgres user=postgres password=admin”) # [!!!]<br>
+Change host, dbname, user and password to yours from PostgreSQL if you don't use already prepared create_database.txt commands which is attached</p>
 cur.execute(&quot;INSERT INTO parser VALUES<br>
 Change name “parser” to the name of [your] table in PostgreSQL</p>
-<p class="has-line-data" data-line-start="22" data-line-end="25">On line [70]:<br>
 cur.execute(“INSERT INTO parser VALUES (%s, %s, %s, %s, %s)”, row)<br>
 change name “parser” to the name of [your] table PostgreSQL</p>
 <hr>

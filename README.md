@@ -65,5 +65,5 @@ From parser<br>
 ^—&lt; You need to put your Values that you set in [First setup]</p>
 <p class="has-line-data" data-line-start="80" data-line-end="84">[When it’s set]<br>
 You can check if programm is working with file ‘Sheet1.html’.<br>
-Drag ‘Sheet1.html’ to your desktop and then copy path to ‘Sheet1.html’<br>
+Drag ‘Sheet1.html’ to your desktop and then copy path (click on it and you will get URL in browser) to ‘Sheet1.html’<br>
 and paste it as URL when program will ask you for URL</p>

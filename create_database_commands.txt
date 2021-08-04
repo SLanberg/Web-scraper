@@ -1,0 +1,6 @@
+sudo apt install postgresql postgresql-contrib
+sudo service postgresql start
+sudo -u postgres psql -c "create role postgres with password 'postgres'"
+sudo -u postgres psql -c "ALTER ROLE postgres WITH LOGIN;"
+sudo -u postgres psql -c "CREATE DATABASE development WITH OWNER postgres"
+sudo -u postgres psql -c 'DROP DATABASE IF EXISTS development'

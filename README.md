@@ -1,20 +1,15 @@
-This is my very-very old project. I should rework a lot of stuff.
-
-
 <hr>
 <p class="has-line-data" data-line-start="1" data-line-end="2">[What it is?]</p>
 <p class="has-line-data" data-line-start="3" data-line-end="6">[Web_scraper] - prototype of HTML parser which collect data from web tables.<br>
 [Web_scraper] - main goal is to collect person’s data from web tables such as: ‘Full Name’, ‘Email’, ‘Gender’, ‘Highest Degree Earned’, ‘University/ School’ then [INSERT] it to PostgreSQL data base and then encrypt,<br>
 then [Web_scraper] shows statistic of people with and without degree in form of pie chart.</p>
-<p class="has-line-data" data-line-start="7" data-line-end="10">In file [web_scraper.py] you will see MARKS.<br>
 #[!!!] - that indicates you what exactly you can change in order to setup [web_scraper.py].<br>
-Mark like this - [36] shows on which line of code you can find reference</p>
 <hr>
 <p class="has-line-data" data-line-start="12" data-line-end="13">[First setup]</p>
-<p class="has-line-data" data-line-start="14" data-line-end="17">On line [36]:<br>
+<p class="has-line-data" data-line-start="14" data-line-end="17">On line [55]:<br>
 conn = psycopg2.connect(“host=localhost dbname=postgres user=postgres password=admin”) #[!!!]<br>
-Change host, dbname, user and password to yours from PostgreSQL</p>
-<p class="has-line-data" data-line-start="18" data-line-end="21">Then on line [63]:<br>
+Change host, dbname, user and password to yours from PostgreSQL if you don't use already prepared create_database.txt commands</p>
+<p class="has-line-data" data-line-start="18" data-line-end="21">Then on line [62]:<br>
 cur.execute(&quot;INSERT INTO parser VALUES<br>
 Change name “parser” to the name of [your] table in PostgreSQL</p>
 <p class="has-line-data" data-line-start="22" data-line-end="25">On line [70]:<br>
@@ -35,17 +30,17 @@ change name “parser” to the name of [your] table PostgreSQL</p>
 <li class="has-line-data" data-line-start="33" data-line-end="42">
 <p class="has-line-data" data-line-start="33" data-line-end="34">You will be asked if you want to upload gathered data to PostgreSQL?</p>
 <pre><code>             To upload files in PostgreSQL you need to change:
-             Line [36] host, dbname, user, password
+             host, dbname, user, password
              You can change this values with any text editor
              in file itself [web_scraper.py]
-             change word: &quot;parser&quot; to your table's name on lines [63] and [70]
+             change word: &quot;parser&quot; to your table's name
 </code></pre>
 </li>
 <li class="has-line-data" data-line-start="42" data-line-end="57">
 <p class="has-line-data" data-line-start="42" data-line-end="43">You will be asked if you want to Encrypt your data. By default [password] that Ecnrypt and Decrypt is “key”</p>
 <pre><code>                             To change password which will Encrypt and Decrypt values
                              change it there:
-                             [64]     cur.execute(&quot;INSERT INTO parser VALUES\
+                             cur.execute(&quot;INSERT INTO parser VALUES\
                                          (PGP_SYM_ENCRYPT(%s, 'key')::text,\
                                          PGP_SYM_ENCRYPT(%s, 'key')::text,\
                                          PGP_SYM_ENCRYPT(%s, 'key')::text,\
@@ -55,7 +50,7 @@ change name “parser” to the name of [your] table PostgreSQL</p>
                                  EXAMPLE: PGP_SYM_ENCRYPT(%s, 'new_key')::text,
 
 
-                             [WARNING: DO NOT STORE PASSWORD LIKE THAT IN PRODUCTION. 
+                             [WARNING: DO NOT STORE PASSWORD LIKE THAT IN PRODUCTION.
 </code></pre>
 </li>
 </ol>
@@ -76,4 +71,3 @@ From parser<br>
 You can check if programm is working with file ‘Sheet1.html’.<br>
 Drag ‘Sheet1.html’ to your desktop and then copy path to ‘Sheet1.html’<br>
 and paste it as URL when program will ask you for URL</p>
-

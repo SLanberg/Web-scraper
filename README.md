@@ -3,16 +3,12 @@
 <p class="has-line-data" data-line-start="3" data-line-end="6">[Web_scraper] - prototype of HTML parser which collect data from web tables.<br>
 [Web_scraper] - main goal is to collect person’s data from web tables such as: ‘Full Name’, ‘Email’, ‘Gender’, ‘Highest Degree Earned’, ‘University/ School’ then [INSERT] it to PostgreSQL data base and then encrypt,<br>
 then [Web_scraper] shows statistic of people with and without degree in form of pie chart.</p>
-#[!!!] - that indicates you what exactly you can change in order to setup [web_scraper.py].<br>
 <hr>
 <p class="has-line-data" data-line-start="12" data-line-end="13">[First setup]</p>
-<p class="has-line-data" data-line-start="14" data-line-end="17">On line [55]:<br>
-conn = psycopg2.connect(“host=localhost dbname=postgres user=postgres password=admin”) #[!!!]<br>
-Change host, dbname, user and password to yours from PostgreSQL if you don't use already prepared create_database.txt commands</p>
-<p class="has-line-data" data-line-start="18" data-line-end="21">Then on line [62]:<br>
+conn = psycopg2.connect(“host=localhost dbname=postgres user=postgres password=admin”) # [!!!]<br>
+Change host, dbname, user and password to yours from PostgreSQL if you don't use already prepared create_database.txt commands which is attached</p>
 cur.execute(&quot;INSERT INTO parser VALUES<br>
 Change name “parser” to the name of [your] table in PostgreSQL</p>
-<p class="has-line-data" data-line-start="22" data-line-end="25">On line [70]:<br>
 cur.execute(“INSERT INTO parser VALUES (%s, %s, %s, %s, %s)”, row)<br>
 change name “parser” to the name of [your] table PostgreSQL</p>
 <hr>
@@ -69,5 +65,5 @@ From parser<br>
 ^—&lt; You need to put your Values that you set in [First setup]</p>
 <p class="has-line-data" data-line-start="80" data-line-end="84">[When it’s set]<br>
 You can check if programm is working with file ‘Sheet1.html’.<br>
-Drag ‘Sheet1.html’ to your desktop and then copy path to ‘Sheet1.html’<br>
+Drag ‘Sheet1.html’ to your desktop and then copy path (click on it and you will get URL in browser) to ‘Sheet1.html’<br>
 and paste it as URL when program will ask you for URL</p>

@@ -3,4 +3,6 @@ sudo service postgresql start
 sudo -u postgres psql -c "create role postgres with password 'postgres'"
 sudo -u postgres psql -c "ALTER ROLE postgres WITH LOGIN;"
 sudo -u postgres psql -c "CREATE DATABASE development WITH OWNER postgres"
-sudo -u postgres psql -c 'DROP DATABASE IF EXISTS development'
+
+(When you tested it just drop database. But please I'm asking you. Don't mess this up if you already have development on your computer related to another project)
+sudo -u postgres psql -c 'DROP DATABASE IF EXISTS (PUT NAME OF YOUR CREATED DB HERE WITHOUT BRACKETS)'

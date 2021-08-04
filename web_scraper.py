@@ -68,6 +68,9 @@ def create_db_if_not_exists():
     cur.execute("CREATE EXTENSION IF NOT EXISTS pgcrypto;")
 
 
+create_db_if_not_exists()
+
+
 print_row_trigger = input("do you want me to print output? [y/n]: ")
 
 # Prepare Pie chart Variables
@@ -90,7 +93,6 @@ for tr in table_rows:
 
     # Insert parsed data to PostgreSQL (our db)
     if Encrypt_data_trigger == 'y':
-        create_db_if_not_exists()
 
         cur.execute("INSERT INTO parser VALUES\
                 (PGP_SYM_ENCRYPT(%s, 'key')::text,\
@@ -99,7 +101,6 @@ for tr in table_rows:
                  PGP_SYM_ENCRYPT(%s, 'key')::text,\
                  PGP_SYM_ENCRYPT(%s, 'key')::text)", row)  # [!!!]
     if Insert_to_db_trigger == 'y' and Encrypt_data_trigger != 'y':
-        create_db_if_not_exists()
 
         cur.execute(
             "INSERT INTO parser VALUES (%s, %s, %s, %s, %s)", row)  # [!!!]

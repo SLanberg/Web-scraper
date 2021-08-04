@@ -3,7 +3,6 @@
 <p class="has-line-data" data-line-start="3" data-line-end="6">[Web_scraper] - prototype of HTML parser which collect data from web tables.<br>
 [Web_scraper] - main goal is to collect person’s data from web tables such as: ‘Full Name’, ‘Email’, ‘Gender’, ‘Highest Degree Earned’, ‘University/ School’ then [INSERT] it to PostgreSQL data base and then encrypt,<br>
 then [Web_scraper] shows statistic of people with and without degree in form of pie chart.</p>
-#[!!!] - that indicates you what exactly you can change in order to setup [web_scraper.py].<br>
 <hr>
 <p class="has-line-data" data-line-start="12" data-line-end="13">[First setup]</p>
 <p class="has-line-data" data-line-start="14" data-line-end="17">On line [55]:<br>
